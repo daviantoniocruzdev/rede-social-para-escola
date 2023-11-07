@@ -1,0 +1,115 @@
+body, html {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6ecf0; /* Twitter's background color */
+    color: #14171a; /* Twitter's primary text color */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff; /* White background for the header */
+    border-bottom: 1px solid #e6ecf0; /* Light border color */
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #1da1f2; /* Twitter's blue color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header a:hover {
+    color: #1a91da; /* Darker blue on hover */
+}
+
+.container {
+    max-width: 600px; /* Closer to Twitter's central column width */
+    margin: 100px auto; /* Adjust top margin to account for fixed header */
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.post-form, .posts {
+    background-color: #ffffff; /* White background for posts */
+    border: 1px solid #e6ecf0; /* Light border like Twitter */
+    border-radius: 16px; /* Rounded corners like Twitter's cards */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post-form h2, .post h3 {
+    margin: 0 0 10px;
+    color: #14171a;
+}
+
+.post-form textarea, .comment-form input[type="text"] {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #e6ecf0; /* Light border color */
+    border-radius: 16px; /* Rounded corners for the input fields */
+    padding: 10px;
+    resize: vertical;
+}
+
+.post-form input[type="submit"], .comment-form input[type="submit"] {
+    background-color: #1da1f2; /* Twitter's blue color */
+    border: none;
+    border-radius: 20px; /* Rounded button edges */
+    padding: 10px 20px;
+    color: #ffffff; /* White text for buttons */
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-form input[type="submit"]:hover, .comment-form input[type="submit"]:hover {
+    background-color: #1a91da; /* Darker blue on hover */
+}
+
+.posts .post, .comments .comment {
+    padding: 15px;
+    border-bottom: 1px solid #e6ecf0; /* Light border like Twitter */
+}
+
+.posts .post:last-child, .comments .comment:last-child {
+    border-bottom: none;
+}
+
+.post small, .comment small {
+    color: #657786; /* Twitter's secondary text color */
+}
+
+.post .likes {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.comments .comment {
+    padding: 10px 0;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 80px auto;
+        width: auto;
+    }
+
+    .post-form textarea, .comment-form input[type="text"] {
+        margin-top: 8px;
+    }
+}
